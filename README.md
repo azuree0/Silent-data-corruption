@@ -25,7 +25,7 @@ cmake --build . --config Release
 
 **Explain:** Checks if your CPU has mercurial cores—cores that occasionally produce incorrect computation results without crash or error. A mismatch indicates a possible defective core.
 
-**Cause** Silent data corruption is when a program runs on defective hardware, finishes without crashing or raising an error, but the result is wrong—and nothing in the system reports it.
+**Cause:** Silent data corruption is when a program runs on defective hardware, finishes without crashing or raising an error, but the result is wrong—and nothing in the system reports it.
 
 The program thinks it succeeded; the user gets a bad answer. The "silent" part means no exception, no log, no visible failure. Causes include silicon defects (from manufacturing or aging), cosmic-ray bit flips, or marginal circuits. 
 
@@ -43,9 +43,9 @@ They matter for SDC because: (1) **Scale** — they run 100,000s or 1,000,000s o
 
 Hyperscalers report that roughly 1 in 1000 CPUs can produce SDCs. This test looks for that kind of defect by running the same computation on every core and comparing results; if 1 core disagrees, it may be defective (a "mercurial" core).
 
-**Solution** Hyperscalers now screen fleets for defective chips. Intel DCDIAG, OpenDCDiag, and similar tools perform in-production and out-of-production testing. This script brings redundant-execution detection to consumer hardware.
+**Solution:** Hyperscalers now screen fleets for defective chips. Intel DCDIAG, OpenDCDiag, and similar tools perform in-production and out-of-production testing. This script brings redundant-execution detection to consumer hardware.
 
-**Lower degradation %**
+**Lowering degradation %**
 
 | Factor | Action |
 |--------|--------|
