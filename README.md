@@ -1,3 +1,5 @@
+<img width="336" height="405" alt="SDC" src="https://github.com/user-attachments/assets/1db52073-faf9-4e6d-895c-36c66dc1625d" />
+
 # Prior
 
 **Install**
