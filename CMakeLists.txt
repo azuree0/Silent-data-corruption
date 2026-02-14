@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.14)
+project(cpu_sdc_test LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Optional CUDA for NVIDIA GPU SDC test (auto-detect if available)
+find_package(CUDAToolkit QUIET)
+if(CUDAToolkit_FOUND)
+    enable_language(CUDA)
+    set(CMAKE_CUDA_STANDARD 17)
+    add_executable(run cpu_sdc_test.cpp gpu_sdc_cuda.cu)
+    target_compile_definitions(run PRIVATE USE_CUDA=1)
+    target_link_libraries(run PRIVATE CUDA::cudart)
+    message(STATUS "CUDA found - NVIDIA GPU SDC test enabled")
+else()
+    add_executable(run cpu_sdc_test.cpp)
+    message(STATUS "CUDA not found - GPU test will use redundant-thread fallback")
+endif()

@@ -1,0 +1,13 @@
+# Build
+build/
+out/
+*.exe
+*.obj
+*.o
+
+# IDE
+.vs/
+.vscode/
+*.user
+
+# State / temp (in build/)
