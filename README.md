@@ -35,14 +35,6 @@ The program thinks it succeeded; the user gets a bad answer. The "silent" part m
 
 Examples: Microsoft (Azure), Google, Alibaba, Tencent, Meta (Facebook), Amazon (AWS)
 
-They matter for SDC because: (1) **Scale** — they run 100,000s or 1,000,000s of CPUs; even rare defects (e.g. 1 in 1,000) show up often enough to be a real problem. 
-
-(2) **Data** — they publish studies on hardware reliability: Meta (arXiv): many defective CPUs across large fleets; Google (HotOS): "a few mercurial cores per several 1,000 machines"; Alibaba (SOSP 2023): ~3.61% of CPUs in their fleet linked to SDC. 
-
-(3) **Mitigation** — they use tools like Intel DCDIAG and OpenDCDiag to screen CPUs before and during use. 
-
-(4) **Research** — they fund and drive work on SDC (e.g. Meta's SDC RFP, OCP Server Resilience).
-
 Hyperscalers report that roughly 1 in 1000 CPUs can produce SDCs. This test looks for that kind of defect by running the same computation on every core and comparing results; if 1 core disagrees, it may be defective (a "mercurial" core).
 
 **Solution:** Hyperscalers now screen fleets for defective chips. Intel DCDIAG, OpenDCDiag, and similar tools perform in-production and out-of-production testing. This script brings redundant-execution detection to consumer hardware.
