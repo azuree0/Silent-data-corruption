@@ -25,7 +25,7 @@ cmake --build . --config Release
 
 # Function
 
-**Explain:** Checks if your CPU has mercurial cores—cores that occasionally produce incorrect computation results without crash or error. A mismatch indicates a possible defective core.
+**Explain:** Checks if your CPU has mercurial cores that occasionally produce incorrect computation results without crash or error.
 
 **Cause:** Silent data corruption is when a program runs on defective hardware, finishes without crashing or raising an error, but the result is wrong—and nothing in the system reports it.
 
