@@ -35,7 +35,7 @@ The program thinks it succeeded; the user gets a bad answer. The "silent" part m
 
 Examples: Microsoft (Azure), Google, Alibaba, Tencent, Meta (Facebook), Amazon (AWS)
 
-Hyperscalers report that roughly 1 in 1000 CPUs can produce SDCs. This test looks for that kind of defect by running the same computation on every core and comparing results; if 1 core disagrees, it may be defective (a "mercurial" core).
+Hyperscalers report that roughly 1 in 1000 CPUs can produce SDCs. This test look for that kind of defect by running the same computation on every core and comparing results; if 1 core disagrees, it may be defective (a "mercurial" core).
 
 **Solution:** Hyperscalers now screen fleets for defective chips. Intel DCDIAG, OpenDCDiag, and similar tools perform in-production and out-of-production testing. This script brings redundant-execution detection to consumer hardware.
 
